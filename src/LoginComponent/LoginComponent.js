@@ -12,10 +12,21 @@ import {
 import { Avatar } from "react-native-elements";
 const { height, width } = Dimensions.get("window");
 
+
 export default class LoginComponent extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      userName: "",
+      passWord: ""
+    };
   }
+  _submitPress(){
+    if (this.state.userName == "terrim" && this.state.passWord == "canvas") {
+      this.props.navigation.navigate("HomeScreen");
+    }
+  }
+  
   render() {
     return (
       <View style={styles.ImageOuterContainer}>
@@ -32,25 +43,33 @@ export default class LoginComponent extends React.Component {
               style={styles.LoginStyle}
               underlineColorAndroid="#D3D3D3"
               placeholder="Login"
+              onChangeText={userName => this.setState({ userName })}
+              value={this.state.userName}
             />
             <TextInput
               secureTextEntry={true}
               style={styles.PasswordStyle}
               underlineColorAndroid="#D3D3D3"
               placeholder="Password"
+              onChangeText={passWord => this.setState({ passWord })}
+              value={this.state.passWord}
             />
             <Text style={styles.ForgotTextStyle}>{"Forgot Password?"}</Text>
-            <TouchableOpacity style={styles.ButtonStyle} color="#0966aa">
+            <TouchableOpacity
+              style={styles.ButtonStyle}
+              color="#0966aa"
+              onPress={() => this._submitPress()}
+            >
               <Text style={{ color: "#fff" }}>{"Sign in"}</Text>
             </TouchableOpacity>
             <View style={styles.IconStyle}>
-            <View style ={styles.IconRoundStyle}>
-              <Avatar
-                rounded
-                size="medium"
-                icon={{ name: "user", type: "entypo",size:50 }}
-                overlayContainerStyle={{backgroundColor:"#00cc66"}}
-              />
+              <View style={styles.IconRoundStyle}>
+                <Avatar
+                  rounded
+                  size="medium"
+                  icon={{ name: "user", type: "entypo", size: 50 }}
+                  overlayContainerStyle={{ backgroundColor: "#00cc66" }}
+                />
               </View>
             </View>
           </View>
@@ -80,13 +99,13 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: -40
   },
-  IconRoundStyle:{
+  IconRoundStyle: {
     width: width / 7,
     height: height / 14,
     borderRadius: 40,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "center"
   },
   imageStyle: {
     width: width,
