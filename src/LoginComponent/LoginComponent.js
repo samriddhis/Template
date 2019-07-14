@@ -6,7 +6,8 @@ import {
   TouchableOpacity,
   Dimensions,
   StyleSheet,
-  ImageBackground
+  ImageBackground,
+  Button
 } from "react-native";
 import { Avatar } from "react-native-elements";
 const { height, width } = Dimensions.get("window");
@@ -25,9 +26,7 @@ export default class LoginComponent extends React.Component {
           <View style={styles.AccViewStyle}>
             <Text style={styles.AccTextStyle}>{"My Account"}</Text>
           </View>
-          <View style={styles.IconStyle}>
-            <Avatar rounded size="medium" icon={{ name: "user", type: "font-awesome" }} />
-          </View>
+
           <View style={styles.OuterContainer}>
             <TextInput
               style={styles.LoginStyle}
@@ -35,14 +34,25 @@ export default class LoginComponent extends React.Component {
               placeholder="Login"
             />
             <TextInput
+              secureTextEntry={true}
               style={styles.PasswordStyle}
               underlineColorAndroid="#D3D3D3"
               placeholder="Password"
             />
             <Text style={styles.ForgotTextStyle}>{"Forgot Password?"}</Text>
             <TouchableOpacity style={styles.ButtonStyle} color="#0966aa">
-              <Text style={{ color: "#fff" }}>{"Submit"}</Text>
+              <Text style={{ color: "#fff" }}>{"Sign in"}</Text>
             </TouchableOpacity>
+            <View style={styles.IconStyle}>
+            <View style ={styles.IconRoundStyle}>
+              <Avatar
+                rounded
+                size="medium"
+                icon={{ name: "user", type: "entypo",size:50 }}
+                overlayContainerStyle={{backgroundColor:"#00cc66"}}
+              />
+              </View>
+            </View>
           </View>
         </ImageBackground>
       </View>
@@ -54,7 +64,7 @@ const styles = StyleSheet.create({
   AccViewStyle: {
     width: width / 2,
     height: height / 10,
-    alignItems: "center",
+    alignItems: "center"
   },
   AccTextStyle: {
     color: "#fff",
@@ -63,10 +73,20 @@ const styles = StyleSheet.create({
   IconStyle: {
     width: width / 5,
     height: height / 10,
-    borderRadius:40,
+    borderRadius: 40,
     backgroundColor: "#00cc66",
-    alignItems:'center',
-    justifyContent:'center'
+    alignItems: "center",
+    justifyContent: "center",
+    position: "absolute",
+    top: -40
+  },
+  IconRoundStyle:{
+    width: width / 7,
+    height: height / 14,
+    borderRadius: 40,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
   imageStyle: {
     width: width,
@@ -85,14 +105,15 @@ const styles = StyleSheet.create({
     padding: 20
   },
   LoginStyle: { width: width / 1.8 },
-  PasswordStyle: { width: width / 1.8 },
-  ForgotTextStyle: { marginLeft: 100 },
+  PasswordStyle: { marginTop: 10, width: width / 1.8 },
+  ForgotTextStyle: { marginLeft: 100, marginTop: 10 },
   ButtonStyle: {
+    marginTop: 35,
     alignItems: "center",
     justifyContent: "center",
-    width: width / 1.8,
-    height: height / 20,
-    borderRadius: 5,
+    width: width / 1.5,
+    height: height / 16,
+    borderRadius: 3,
     backgroundColor: "#0966aa"
   }
 });
