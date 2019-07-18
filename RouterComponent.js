@@ -4,10 +4,10 @@ import HomeComponent from "./src/HomeComponent/HomeComponent"
 export default (RouterComponent = createStackNavigator(
   {
     LoginScreen: {
-      screen:  HomeComponent
+      screen: LoginComponent
     },
     HomeScreen:{
-      screen: LoginComponent
+      screen: HomeComponent
     }
   },
   {

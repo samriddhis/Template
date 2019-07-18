@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     headerStyle:{
         width:width,
         height:height/12,
-        backgroundColor:"#BB9670",
+        backgroundColor:"#2980B9",
         justifyContent:"center",
         alignItems:"center"
     },
