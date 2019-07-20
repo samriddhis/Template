@@ -4,14 +4,38 @@ import {
   Text,
   StyleSheet,
   ImageBackground,
-  Dimensions
+  Dimensions,
+  TouchableOpacity,
+  BackHandler
 } from "react-native";
-import { HeaderComponent } from "./HeaderComponent";
+import HeaderComponent from "./HeaderComponent";
 const { width, height } = Dimensions.get("window");
 import { Icon } from "react-native-elements";
 export default class HomeComponent extends React.Component {
   constructor(props) {
     super(props);
+    this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
+  }
+  _MenuPress() {
+    this.props.navigation.navigate("MenuScreen");
+  }
+  componentWillMount() {
+    BackHandler.addEventListener(
+      "hardwareBackPress",
+      this.handleBackButtonClick
+    );
+  }
+
+  componentWillUnmount() {
+    BackHandler.removeEventListener(
+      "hardwareBackPress",
+      this.handleBackButtonClick
+    );
+  }
+
+  handleBackButtonClick() {
+    BackHandler.exitApp();
+    return null;
   }
   render() {
     return (
@@ -22,39 +46,56 @@ export default class HomeComponent extends React.Component {
         >
           <HeaderComponent />
           <View style={styles.FirstContainer}>
-            <View opacity={0.3} style={styles.BlockStyle}>
-              <Icon reverse name="restaurant-menu" type="material" size={20} />
-              <Text color={"red"} style={styles.TextStyle}>
-                Menu
-              </Text>
-            </View>
-            <View opacity={0.3} style={styles.BlockStyle}>
-              <Icon reverse name="info" type="font-awesome" size={20} />
-              <Text style={styles.TextStyle}>About Us</Text>
-            </View>
-            <View opacity={0.3} style={styles.BlockStyle}>
-              <Icon reverse name="facebook-f" type="font-awesome" size={20} />
-              <Text style={styles.TextStyle}>Facebook</Text>
-            </View>
+            <TouchableOpacity onPress={() => this._MenuPress()}>
+              <View opacity={0.3} style={styles.BlockStyle}>
+                <Icon
+                  reverse
+                  name="restaurant-menu"
+                  type="material"
+                  size={20}
+                />
+                <Text color={"red"} style={styles.TextStyle}>
+                  Menu
+                </Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View opacity={0.3} style={styles.BlockStyle}>
+                <Icon reverse name="info" type="font-awesome" size={20} />
+                <Text style={styles.TextStyle}>About Us</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View opacity={0.3} style={styles.BlockStyle}>
+                <Icon reverse name="facebook-f" type="font-awesome" size={20} />
+                <Text style={styles.TextStyle}>Facebook</Text>
+              </View>
+            </TouchableOpacity>
           </View>
           <View style={styles.SecondContainer}>
-            <View opacity={0.2} style={styles.BlockStyle}>
-              <Icon reverse name="event" type="material" size={20} />
-              <Text style={styles.TextStyle}>Events</Text>
-            </View>
-            <View opacity={0.2} style={styles.BlockStyle}>
-              <Icon reverse name="user" type="font-awesome" size={20} />
-              <Text style={styles.TextStyle}>Profile</Text>
-            </View>
-            <View opacity={0.2} style={styles.BlockStyle}>
-              <Icon
-                reverse
-                name="shopping-cart"
-                type="font-awesome"
-                size={20}
-              />
-              <Text style={styles.TextStyle}>Cart</Text>
-            </View>
+            <TouchableOpacity>
+              <View opacity={0.2} style={styles.BlockStyle}>
+                <Icon reverse name="event" type="material" size={20} />
+                <Text style={styles.TextStyle}>Events</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View opacity={0.2} style={styles.BlockStyle}>
+                <Icon reverse name="user" type="font-awesome" size={20} />
+                <Text style={styles.TextStyle}>Profile</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View opacity={0.2} style={styles.BlockStyle}>
+                <Icon
+                  reverse
+                  name="shopping-cart"
+                  type="font-awesome"
+                  size={20}
+                />
+                <Text style={styles.TextStyle}>Cart</Text>
+              </View>
+            </TouchableOpacity>
           </View>
         </ImageBackground>
       </View>

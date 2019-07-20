@@ -1,0 +1,108 @@
+﻿{
+  "detailList": [
+    {
+      "id": 1,
+      "flavor": "chocolate",
+      "price": 800,
+      "Type": "Egg",
+      "url": "https://images.pexels.com/photos/69817/france-confectionery-raspberry-cake-fruit-69817.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "weight": "1kg"
+    },
+    {
+      "id": 2,
+      "flavor": "chocolate",
+      "price": 600,
+      "Type": "Egg",
+      "url": "http://2.bp.blogspot.com/-xCHChM9ldL8/U9JEfLtJZYI/AAAAAAAASFQ/QLtLzojJ8S8/s1600/Birthday+cake+background+hd+gallery.1.jpg",
+      "weight": "1kg"
+    },
+    {
+      "id": 3,
+      "flavor": "Black Forest Cake",
+      "price": 700,
+      "Type": "EggLess",
+      "url": "https://www.freewalldownload.com/hd-wallpapers-download/black-forest-cake-hd-wallpaper-picture.jpg",
+      "weight": "1kg"
+    },
+    {
+      "id": 4,
+      "flavor": "choco truffle",
+      "price": 500,
+      "Type": "EggLess",
+      "url": "https://static.cakezone.com/cakes/large/choco-truffle1534569908.jpg",
+      "weight": "1kg"
+    },
+    {
+      "id": 5,
+      "flavor": "choco vanilla",
+      "price": 800,
+      "Type": "EggLess",
+      "url": "https://d2m1a7vdhhb67a.cloudfront.net/sites/default/files/styles/product_image/public/chocolate-vanilla-cake-A.jpg?itok=xCsW77Ja",
+      "weight": "1kg"
+    },
+    {
+      "id": 6,
+      "flavor": "Creamy Vanilla Fruit Cake",
+      "price": 600,
+      "Type": "EggLess",
+      "url": "https://i2.fnp.com/images/pr/l/creamy-vanilla-fruit-cake-half-kg_2.jpg",
+      "weight": "1kg"
+    },
+    {
+      "id": 7,
+      "flavor": "Exquisite Mango Cake",
+      "price": 650,
+      "Type": "Egg",
+      "url": "http://gharbaithebazar.com/wp-content/uploads/2016/06/22.-Mango-Cake-with-Chocolate-Garnis.jpg",
+      "weight": "1kg"
+    },
+    {
+      "id": 8,
+      "flavor": "Crunchy Caramel Walnut Cake",
+      "price": 720,
+      "Type": "Egg",
+      "url": "https://i1.fnp.com/images/pr/l/crunchy-caramel-walnut-cake-half-kg_1.jpg",
+      "weight": "1kg"
+    },
+    {
+      "id": 9,
+      "flavor": "Fresh Vanilla Cake",
+      "price": 550,
+      "Type": "Egg",
+      "url": "https://www.insity.com/content/images/thumbs/001/0010721_fresh-vanilla-cake_550.jpeg",
+      "weight": "1kg"
+    },
+    {
+      "id": 10,
+      "flavor": "Butterscotch Cake",
+      "price": 560,
+      "Type": "Egg",
+      "url": "http://www.lotusflorist.in/wp-content/uploads/2017/10/Butterscotch-Cake.jpg",
+      "weight": "1kg"
+    },
+    {
+      "id": 11,
+      "flavor": "Crunchy Choco Cake",
+      "price": 550,
+      "Type": "Egg",
+      "url": "https://www.purpleferns.com/uploads/products/108/choco%20walnut%20cakes.jpg",
+      "weight": "1kg"
+    },
+    {
+      "id": 12,
+      "flavor": "Cream Drop Caramel Cake",
+      "price": 660,
+      "Type": "Eggless",
+      "url": "https://i1.fnp.com/images/pr/l/cream-drop-caramel-cake-half-kg_1.jpg",
+      "weight": "1kg"
+    },
+    {
+      "id": 13,
+      "flavor": "Kit Kat Cake",
+      "price": 800,
+      "Type": "Eggless",
+      "url": "https://www.momlovesbaking.com/wp-content/uploads/2015/07/Kit-Kat-Cake-Square.jpg",
+      "weight": "1kg"
+    }
+  ]
+}
