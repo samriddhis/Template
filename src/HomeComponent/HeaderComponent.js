@@ -6,6 +6,7 @@ import { Icon } from "react-native-elements";
 export default class HeaderComponent extends React.Component {
   constructor(props) {
     super(props);
+    this._logOutPress = this._logOutPress.bind(this);
   }
   _logOutPress() {
     console.log("hello");
