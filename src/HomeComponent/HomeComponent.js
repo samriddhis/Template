@@ -11,6 +11,7 @@ import {
 import HeaderComponent from "./HeaderComponent";
 const { width, height } = Dimensions.get("window");
 import { Icon } from "react-native-elements";
+import Swiper from 'react-native-swiper';
 export default class HomeComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +45,7 @@ export default class HomeComponent extends React.Component {
           source={require("../../images/cake5.jpg")}
           style={styles.ImageStyle}
         >
-          <HeaderComponent />
+          <HeaderComponent scope={this} type={"Home"} />
           <View style={styles.FirstContainer}>
             <TouchableOpacity onPress={() => this._MenuPress()}>
               <View opacity={0.3} style={styles.BlockStyle}>

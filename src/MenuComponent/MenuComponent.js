@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import * as data from "../../CakeDetails.json";
 const { height, width } = Dimensions.get("window");
-import  HeaderComponent  from "../HomeComponent/HeaderComponent";
+import HeaderComponent from "../HomeComponent/HeaderComponent";
 
 export default class MenuComponent extends React.Component {
   constructor(props) {
@@ -35,7 +35,7 @@ export default class MenuComponent extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <HeaderComponent />
+        <HeaderComponent scope={this} />
         <FlatList
           style={styles.dataStyle}
           ref={ref => (this.listRef = ref)}

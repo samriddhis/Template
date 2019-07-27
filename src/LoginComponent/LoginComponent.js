@@ -101,6 +101,7 @@ export default class LoginComponent extends React.Component {
         console.log("unable to login");
         Alert.alert(response.message);
       } else {
+        Alert.alert(response.message);
         this.setState({
           switchValue: !this.state.switchValue,
           userName: "",
@@ -113,7 +114,11 @@ export default class LoginComponent extends React.Component {
   }
 
   _toggleSwitch() {
-    this.setState({ switchValue: !this.state.switchValue });
+    this.setState({
+      switchValue: !this.state.switchValue,
+      userName: "",
+      passWord: ""
+    });
   }
   render() {
     return (
